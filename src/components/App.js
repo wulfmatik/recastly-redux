@@ -27,6 +27,7 @@ class App extends React.Component {
   }
 
   getYouTubeVideos(query) {
+    console.log('APP PROPS', this);
     var options = {
       key: this.props.API_KEY,
       query: query

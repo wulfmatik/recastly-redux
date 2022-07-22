@@ -8,7 +8,7 @@ import handleSearchChange from '../actions/search.js';
 //   });
 // };
 var mapDispatchToProps = (dispatch) => ({
-  handleSearchInputChange: () => dispatch(handleSearchChange)
+  handleSearchInputChange: (q) => dispatch(handleSearchChange(q))
 });
 var SearchContainer = connect(null, mapDispatchToProps)(Search);
 
