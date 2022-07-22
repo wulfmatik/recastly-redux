@@ -5,7 +5,7 @@ var currentVideoReducer = (state = null, action) => {
   switch (action.type) {
   case 'CHANGE_VIDEO':
     console.log(action);
-    return action.video;
+    return action.video || null;
 
   default:
     return state;

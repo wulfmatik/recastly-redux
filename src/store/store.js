@@ -7,8 +7,8 @@ import changeVideoList from '../actions/videoList.js';
 // TODO:  Create your redux store, apply thunk as a middleware, and export it!
 const middlewareEnhancer = applyMiddleware(thunk);
 var baseState = {
-  videoList: [],
-  currentVideo: {}
+  videoList: exampleVideoData,
+  currentVideo: exampleVideoData[0]
 };
 const store = createStore(rootReducer, baseState, middlewareEnhancer);
 
