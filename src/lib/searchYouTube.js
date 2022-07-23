@@ -1,5 +1,4 @@
-var searchYouTube = ({key, query, max = 5}, callback) => {
-  console.log('KEY', key, 'Q', query, 'MAX', max);
+var searchYouTube = ({key, query, max}, callback) => {
   $.get('https://www.googleapis.com/youtube/v3/search', {
     part: 'snippet',
     key: key,
@@ -9,6 +8,7 @@ var searchYouTube = ({key, query, max = 5}, callback) => {
     videoEmbeddable: 'true'
   })
     .done(({items}) => {
+      console.log('ITEMS in .done', items);
       if (callback) {
         callback(items);
       }
